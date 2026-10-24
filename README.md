@@ -18,6 +18,8 @@ Open http://localhost:8000.
 - `css/portfolio.css`: shared resets, artwork, and foundational component styles.
 - `css/studio.css`: full-screen layout, responsive project stack, typography, menu, and motion preferences.
 - `js/studio.js`: procedural 3D knot, pointer and scroll interaction, native dialog navigation, motion controls, and local clock.
+- `js/theme.js`: applies the saved or system theme before styles load; synchronizes accessible header/footer switches and remembers selections.
+- `css/theme.css`: light/dark palettes for the full page, project panels, menu, and controls.
 - `assets/favicon.svg`: site icon.
 - `documents/Profile.pdf`: existing downloadable résumé.
 - `CNAME`: existing GitHub Pages custom domain; retained unchanged.

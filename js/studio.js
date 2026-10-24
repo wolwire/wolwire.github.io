@@ -69,6 +69,7 @@ function paint() {
     const p = 8.5 / (8.5 - depth);
     return [width / 2 + finalX * scale * p, height / 2 + finalY * scale * p, depth];
   });
+  const lightTheme = document.documentElement.dataset.theme === 'light';
   const sorted = faces.map(indices => ({ indices, z: indices.reduce((sum, i) => sum + projected[i][2], 0) / 4 })).sort((a, b) => a.z - b.z);
   sorted.forEach(({indices, z}) => {
     const light = Math.min(1, Math.max(0, (z + 3) / 6));
@@ -78,9 +79,11 @@ function paint() {
       if (index === 0) ctx.moveTo(p[0], p[1]); else ctx.lineTo(p[0], p[1]);
     });
     ctx.closePath();
-    ctx.fillStyle = `rgb(${Math.round(30 + light * 128)},${Math.round(37 + light * 145)},${Math.round(16 + light * 40)})`;
+    ctx.fillStyle = lightTheme
+      ? `rgb(${Math.round(55 + light * 105)},${Math.round(69 + light * 110)},${Math.round(30 + light * 43)})`
+      : `rgb(${Math.round(30 + light * 128)},${Math.round(37 + light * 145)},${Math.round(16 + light * 40)})`;
     ctx.fill();
-    ctx.strokeStyle = `rgba(221,250,93,${.15 + light * .58})`;
+    ctx.strokeStyle = lightTheme ? `rgba(42,61,20,${.25 + light * .3})` : `rgba(221,250,93,${.15 + light * .58})`;
     ctx.lineWidth = .55;
     ctx.stroke();
   });
@@ -195,5 +198,6 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 60000);
 document.querySelector('#year').textContent = new Date().getFullYear();
+document.addEventListener('portfolio:theme', () => paint());
 sizeCanvas();
 syncMotion();
