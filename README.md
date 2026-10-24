@@ -14,15 +14,21 @@ Open http://localhost:8000.
 
 ## Editing
 
-- `index.html`: biography, project cards, experience, and writing. Each project card declares a category with `data-category`.
-- `css/portfolio.css`: responsive design, project illustrations, and print styles.
-- `js/portfolio.js`: category filters, motion preferences, scroll reveals, pointer interactions, and a lightweight canvas particle scene. Project content remains available without JavaScript.
-- `css/motion.css`: progressive motion layer, reduced-motion handling, and hover animations. The floating pause control remembers the visitor’s choice. Canvas rendering pauses outside the hero or when the page is hidden.
+- `index.html`: editorial page, six project panels, career history, writing, and contact.
+- `css/portfolio.css`: shared resets, artwork, and foundational component styles.
+- `css/studio.css`: full-screen layout, responsive project stack, typography, menu, and motion preferences.
+- `js/studio.js`: procedural 3D knot, pointer and scroll interaction, native dialog navigation, motion controls, and local clock.
 - `assets/favicon.svg`: site icon.
 - `documents/Profile.pdf`: existing downloadable résumé.
 - `CNAME`: existing GitHub Pages custom domain; retained unchanged.
 
-Project visuals are original HTML/CSS illustrations, not application screenshots. Fonts load from Google Fonts, with local serif and system font fallbacks.
+The canvas sculpture is generated locally from a parametric knot. The scene renders at a maximum of 30 frames per second and stops when offscreen or in a hidden tab. System reduced-motion preferences and the saved motion toggle disable automatic motion. Mobile uses a normal vertical project layout; desktop uses stacked sticky panels without intercepting scrolling. Content and project links remain available without JavaScript, and the hero has a CSS artwork fallback.
+
+Fonts load from Google Fonts with local fallbacks. Project artwork is original HTML/CSS illustration rather than application screenshots.
+
+## Visual references
+
+The new direction was informed by the oversized type and experimental composition of [FORMAT](https://format.obys.agency/), the large-scale work presentation of [Huy Phan](https://huyml.co/), and the editorial portfolio of [Brandon Yasin](https://brandonyasin.com/), discovered through Awwwards. No reference-site assets or source code were reused.
 
 ## Subdomain review — 23 October 2026
 
