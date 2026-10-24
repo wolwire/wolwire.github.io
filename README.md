@@ -16,7 +16,8 @@ Open http://localhost:8000.
 
 - `index.html`: biography, project cards, experience, and writing. Each project card declares a category with `data-category`.
 - `css/portfolio.css`: responsive design, project illustrations, and print styles.
-- `js/portfolio.js`: accessible category filters and current footer year. Project content remains available without JavaScript.
+- `js/portfolio.js`: category filters, motion preferences, scroll reveals, pointer interactions, and a lightweight canvas particle scene. Project content remains available without JavaScript.
+- `css/motion.css`: progressive motion layer, reduced-motion handling, and hover animations. The floating pause control remembers the visitor’s choice. Canvas rendering pauses outside the hero or when the page is hidden.
 - `assets/favicon.svg`: site icon.
 - `documents/Profile.pdf`: existing downloadable résumé.
 - `CNAME`: existing GitHub Pages custom domain; retained unchanged.
@@ -39,4 +40,4 @@ Historical mail/control-panel names and wildcard records were not treated as pub
 
 ## Deployment
 
-This checkout retains the original GitHub Pages layout. Publish through the repository's existing Pages configuration after committing and pushing the changes. No hosted deployment has been performed by this redesign.
+This checkout retains the original GitHub Pages layout. Publish through the repository's existing Pages configuration after committing and pushing the changes. Pushing to the configured publishing branch lets the existing GitHub Pages workflow publish the site.
